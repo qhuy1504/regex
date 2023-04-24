@@ -38,40 +38,61 @@
                         </div>
                         <div class="modal-body">
                             <div class="modal-item">
-                                <label for="txtMabn" class="lb">Mã bệnh nhân</label>
-                                <div class="input-mabn"><input style="width: 750px; height: 30px; padding-left: 10px;"
-                                        type="text" name="txtMabn" id="txtMabn" placeholder="Ma benh nhan"></div>
+                                <label for="txtMabn" class="lb">Mã bệnh nhân </label>
+                                <div class="input-mabn"><input onblur="CheckMaBn()"
+                                        style="width: 750px; height: 30px; padding-left: 10px;" type="text"
+                                        name="txtMabn" id="txtMabn" placeholder="Ma benh nhan"></div>
+                                <div class="error"><span style="color: red;" id="error-mabn">(*)BN-YYYYY</span>
+                                </div>
+
                             </div>
                             <br>
                             <div class="modal-item">
                                 <label for="txtMatkhau" class="lb">Mật khẩu</label>
                                 <div class="input-matkhau">
-                                    <input style="width: 750px; height: 30px; padding-left: 10px;" type="text"
+                                    <input onblur="CheckMatKhau()"
+                                        style="width: 750px; height: 30px; padding-left: 10px;" type="text"
                                         name="txtMatkhau" id="txtMatkhau" placeholder="Mat khau">
+                                    <div class="error"><span style="color: red;" id="error-matkhau">(*)</span>
+                                    </div>
                                 </div>
+
                                 <br>
                             </div>
+
                             <div class="modal-item">
                                 <label for="txtNgaykham" class="lb">Ngày khám</label>
                                 <div class="input-ngaykham">
-                                    <input style="width: 750px; height: 35px; padding-left: 10px;" type="date"
+                                    <input onblur="CheckNgayKham()"
+                                        style="width: 750px; height: 35px; padding-left: 10px;" type="date"
                                         name="txtNgaykham" id="txtNgaykham">
                                 </div>
+                                <div class="error"><span style="color: red;" id="error-ngaykham">(*)</span>
+                                </div>
                             </div>
+
+
                             <br>
                             <div class="modal-item_service">
                                 <label for="txtDichvu" class="lb">Loại dịch vụ</label>
                                 <div class="input-dichvu">
-                                    <input style="width: 15px; height: 15px; " type="checkbox" name="ck-1" id="ck-1">
+                                    <input onblur="checkDichVu()" style="width: 15px; height: 15px; " type="checkbox"
+                                        name="ck-1" id="ck-1">
                                     <label for="ck-1">Khám bệnh theo yêu cầu</label>
 
-                                    <input style="width: 15px; height: 15px; " type="checkbox" name="ck-2" id="ck-2">
+                                    <input onblur="checkDichVu()" style="width: 15px; height: 15px; " type="checkbox"
+                                        name="ck-2" id="ck-2">
                                     <label for="ck-2">Điều trị ngoại trú</label>
 
-                                    <input style="width: 15px; height: 15px; " type="checkbox" name="ck-3" id="ck-3">
+                                    <input onblur="checkDichVu()" style="width: 15px; height: 15px; " type="checkbox"
+                                        name="ck-3" id="ck-3">
                                     <label for="ck-3">Bác sĩ theo yêu cầu</label>
+
+                                </div>
+                                <div class="error"><span style="color: red;" id="error-dichvu">(*)</span>
                                 </div>
                             </div>
+
                             <br>
                             <div class="modal-item">
                                 <label for="txtChuyenKhoa" class="lb">Chuyên khoa</label>
@@ -79,13 +100,17 @@
                                     <select style="width: 750px; height: 30px; padding-left: 10px;" name="txtChuyenKhoa"
                                         id="txtChuyenKhoa">
                                         <option value="1">Ngoại tổng quát</option>
-                                        <option value="2">Nội tổng quát</option>
-                                        <option value="3">Tổng quát toàn thân </option>
+                                        <option value="2">Nhi</option>
+                                        <option value="3">Nội tổng quát</option>
+
                                     </select>
+                                </div>
+                                <div class="error"><span style="color: red;" id="error-chuyenkhoa">(*)</span>
                                 </div>
                             </div>
 
-                            <button style="background-color: #008be2; color: white; margin-left: -2px;" type="button"
+                            <button onblur="validate()"
+                                style="background-color: #008be2; color: white; margin-left: -2px;" type="button"
                                 class="btn btn-primary">Đặt
                                 lịch</button>
                         </div>
