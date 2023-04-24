@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/CSS/style.css">
+    <script src="/JS/main.js"></script>
+    <title>WEB KHÁM BỆNH</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="banner">
+            <img src="/IMAGES/bacsi.png" alt="">
+            <p>Tư Vấn Online</p>
+        </div>
+        <div class="menu">
+            <button>Trang chủ</button>
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Đặt lịch
+            </button>
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3 class="modal-title" id="exampleModalLabel">Đặt lịch khám Online</h3>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="modal-item">
+                                <label for="txtMabn" class="lb">Mã bệnh nhân</label>
+                                <div class="input-mabn"><input style="width: 750px; height: 30px; padding-left: 10px;"
+                                        type="text" name="txtMabn" id="txtMabn" placeholder="Ma benh nhan"></div>
+                            </div>
+                            <br>
+                            <div class="modal-item">
+                                <label for="txtMatkhau" class="lb">Mật khẩu</label>
+                                <div class="input-matkhau">
+                                    <input style="width: 750px; height: 30px; padding-left: 10px;" type="text"
+                                        name="txtMatkhau" id="txtMatkhau" placeholder="Mat khau">
+                                </div>
+                                <br>
+                            </div>
+                            <div class="modal-item">
+                                <label for="txtNgaykham" class="lb">Ngày khám</label>
+                                <div class="input-ngaykham">
+                                    <input style="width: 750px; height: 35px; padding-left: 10px;" type="date"
+                                        name="txtNgaykham" id="txtNgaykham">
+                                </div>
+                            </div>
+                            <br>
+                            <div class="modal-item_service">
+                                <label for="txtDichvu" class="lb">Loại dịch vụ</label>
+                                <div class="input-dichvu">
+                                    <input style="width: 15px; height: 15px; " type="checkbox" name="ck-1" id="ck-1">
+                                    <label for="ck-1">Khám bệnh theo yêu cầu</label>
+
+                                    <input style="width: 15px; height: 15px; " type="checkbox" name="ck-2" id="ck-2">
+                                    <label for="ck-2">Điều trị ngoại trú</label>
+
+                                    <input style="width: 15px; height: 15px; " type="checkbox" name="ck-3" id="ck-3">
+                                    <label for="ck-3">Bác sĩ theo yêu cầu</label>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="modal-item">
+                                <label for="txtChuyenKhoa" class="lb">Chuyên khoa</label>
+                                <div class="input-chuyenkhoa">
+                                    <select style="width: 750px; height: 30px; padding-left: 10px;" name="txtChuyenKhoa"
+                                        id="txtChuyenKhoa">
+                                        <option value="1">Ngoại tổng quát</option>
+                                        <option value="2">Nội tổng quát</option>
+                                        <option value="3">Tổng quát toàn thân </option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <button style="background-color: #008be2; color: white; margin-left: -2px;" type="button"
+                                class="btn btn-primary">Đặt
+                                lịch</button>
+                        </div>
+                        <div class="modal-footer">
+                            <button style="background-color: #008be2; color: white;" type="button"
+                                class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>STT</th>
+                    <th>Mã bệnh nhân</th>
+                    <th>Mật khẩu</th>
+                    <th>Ngày khám</th>
+                    <th>Phụ thu dịch vụ</th>
+                    <th>Chuyên khoa</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+</body>
+
+</html>
